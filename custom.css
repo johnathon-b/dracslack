@@ -17,6 +17,30 @@
    --scrollbar-background: #282A36;
    --scrollbar-border: #bd93f9;
 }
+.TeamSidebar {
+  background-color: red !important;
+  height: 113%;
+  position: relative;
+  flex-direction: column;
+  -webkit-user-select: none;
+  outline: none;
+  transition: background-color 0.1s ease-out;
+}
+
+
+/* In-Team Side Bar */
+#team_menu #team_name {
+  color: #bd93f9 !important;
+}
+
+#team_menu, #quick_switcher_btn, #team_menu_overlay, #col_channels_overlay {
+  border: 0px !important;
+  background-color: #21222c !important;
+}
+
+.c-scrollbar {
+  background-color: #21222c !important;
+}
 
 #msgs_scroller_div::-webkit-scrollbar-track, #client_body::before, .client_container,
 #search_terms, #client_body, #footer, ts-message, .channel_header, ts-jumper ts-jumper-container,
@@ -41,8 +65,33 @@ ts-jumper input[type="text"]::-webkit-input-placeholder {
 
 #msg_input, #primary_file_button {
   background: transparent !important;
-  color: #bd93f9 !important;
+  color: #f8f8f2 !important;
   border-color: #44475a !important;
+}
+
+/* msg input plus sign */
+.ts_icon_plus_thick:before {
+  color: #bd93f9;
+  content: '\E306';
+}
+
+/* place holder message */
+.ql-placeholder{
+  color:#bd93f9 !important;
+  opacity:1 !important;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  -webkit-filter:grayscale(0%) !important;
+  filter:grayscale(0%) !important;
+  display:none;
+  font-style:normal;
+  pointer-events:none;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  max-height:100%
 }
 
 
@@ -65,13 +114,15 @@ ts-message {
    margin: 1px !important;
    border-right: 1px;
    border-left: 1px;
-   1px solid transparent !important; /* reserve space for hover */
+   border: 1px solid transparent !important; /* reserve space for hover */
 }
 
 ts-message:hover {
-   margin: 0px !important;
-   background: var(--background-hover) !important;
-   border: 0px solid var(--border-bright) !important
+  border-radius: 5px !important;
+  margin: 1px !important;
+  border-right: 1px !important;
+  border-left: 1px !important;
+  border: 1px solid transparent !important; /* reserve space for hover */
 }
 
 #messages_container::after {
@@ -91,7 +142,6 @@ ts-message:hover {
 }
 
 .rxn,
-#team_menu,
 #col_channels,
 #col_channels_footer,
 pre,
@@ -126,7 +176,7 @@ ts-message .action_hover_container .btn_msg_action,
 }
 
 .action_hover_container {
-  border: 1px solid var(--border-dim) !important;
+  border: 0px solid var(--border-dim) !important;
 }
 .ts_tip_float.btn_msg_action:not(:last-child) {
   border-right: 1px solid var(--border-dim) !important;
