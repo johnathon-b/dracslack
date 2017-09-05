@@ -71,9 +71,15 @@ ts-jumper input[type="text"]::-webkit-input-placeholder {
 
 /* msg input plus sign */
 .ts_icon_plus_thick:before {
-  color: #bd93f9;
-  content: '\E306';
+  content: '\00a0';
+  width: 25px !important;
+  display: inline-block !important;
+  background-image: url(https://draculatheme.com/assets/img/icons/dracula.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
 }
+
+
 
 /* place holder message */
 .ql-placeholder{
